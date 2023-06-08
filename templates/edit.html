@@ -1,0 +1,20 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Edit Book{% endblock %}
+
+{% block content %}
+<body>
+    <div class="container">
+    {{ wtf.quick_form(form, novalidate=True)}}
+    </div>
+    <br>
+
+</body>
+<footer id="mdb-footer" class="mt-5">
+    <div class="container py-5">
+        <div class="text-center">
+        	<a href="{{ url_for('home') }}" class="btn btn-primary" style="">Home<i class="fas fa-angle-double-right ms-2"></i></a>
+        </div>
+    </div>    
+</footer>
+{% endblock content %}
